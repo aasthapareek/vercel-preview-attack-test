@@ -1,0 +1,14 @@
+{
+  "name": "vercel-preview-attack-test",
+  "version": "1.0.0",
+  "description": "Testing Vercel preview deployment security",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step needed'",
+    "start": "echo 'Serverless functions'"
+  },
+  "keywords": ["vercel", "security", "preview"],
+  "author": "Security Researcher",
+  "license": "MIT"
+}
