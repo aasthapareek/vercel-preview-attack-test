@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build step needed'",
-    "start": "echo 'Serverless functions'"
+    "build": "mkdir -p public && echo 'Build complete' > public/build.log",
+    "start": "vercel start"
   },
   "keywords": ["vercel", "security", "preview"],
   "author": "Security Researcher",

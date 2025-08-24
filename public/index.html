@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vercel Preview Security Test</title>
+</head>
+<body>
+    <h1>Vercel Preview Security Test</h1>
+    <p>This is a security research project testing Vercel preview deployment boundaries.</p>
+    
+    <h2>API Endpoints:</h2>
+    <ul>
+        <li><a href="/api/production-check">/api/production-check</a> - Production environment check</li>
+        <li><a href="/api/preview-attack">/api/preview-attack</a> - Preview attack test</li>
+    </ul>
+    
+    <h3>Security Test Status:</h3>
+    <p id="test-results">Click the API links above to test security boundaries.</p>
+    
+    <script>
+        // Simple JS to test the APIs
+        async function testAPI(endpoint) {
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                document.getElementById("test-results").innerHTML = 
+                    "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            } catch (error) {
+                document.getElementById("test-results").innerHTML = 
+                    "Error: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
